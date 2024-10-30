@@ -1,0 +1,370 @@
+<!-- Function in JavaScript
+A function is a block of reusable code written to perform a specific task.
+
+Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is 
+similar to a procedure—a set of statements that performs a task or calculates a value, but for a 
+procedure to qualify as a function, it should take some input and return an output where there is some 
+obvious relationship between the input and the output. To use a function, you must define it somewhere in 
+the scope from which you wish to call it.
+
+You can think of a function as a sub-program within the main program. A function consists of
+ a set of statements but executes as a single unit. In JavaScript, functions are first-class objects, because they can
+be passed to other functions, returned from functions, and assigned to variables and properties. They can also have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called.
+
+In JavaScript, we have some browser built-in functions like alert(), prompt(), and confirm(). 
+A JavaScript function is a block of code designed to perform a particular task.
+A JavaScript function is executed when "something" invokes it (calls it).
+
+
+Defining functions
+Function declarations
+
+
+A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+The parentheses may include parameter names separated by commas:
+(parameter1, parameter2, ...)
+The code to be executed, by the function, is placed inside curly brackets: {}
+
+A function definition (also called a function declaration, or function statement) consists of 
+
+a. the function keyword, followed by:
+b. The name of the function.
+c. A list of parameters to the function, enclosed in parentheses and separated by commas.
+d. The JavaScript statements that define the function, enclosed in curly brackets, { /* … */ }.
+
+eg 
+function nameOfFunction() {
+	//some code here....
+}
+
+function sayHello() {
+	console.log("Hello world"); 
+}
+
+function name(parameter1, parameter2, parameter3) {
+    // code to be executed
+  }
+  function square(number) {
+    return number * number;
+  }
+
+
+Function parameters are listed inside the parentheses () in the function definition.
+Function arguments are the values received by the function when it is invoked.
+Inside the function, the arguments (the parameters) behave as local variables.
+
+While the function declaration above is syntactically a statement, functions can also be created by a function expression.
+
+Such a function can be anonymous; it does not have to have a name.
+
+
+
+Function Expressions
+A JavaScript function can also be defined using an expression.
+
+A function expression can be stored in a variable:
+Example
+const x = function (a, b) {return a * b};
+
+After a function expression has been stored in a variable, the variable can be used as a function:
+
+Example
+const x = function (a, b) {return a * b};
+let z = x(4, 3);
+
+The function above is actually an anonymous function (a function without a name).
+
+function myFunc(theArr) {
+    theArr[0] = 30;
+  }
+  
+  const arr = [45];
+  
+  console.log(arr[0]); // 45
+  myFunc(arr);
+  console.log(arr[0]); // 30
+
+  let namedFunction = function myFunction(){
+	//some code here...
+    
+}
+
+let anonymousFunction = function(){
+	//some code here...
+}
+
+
+Functions stored in variables do not need function names. They are always invoked (called) using
+ the variable name.
+
+ Function Invocation
+The code inside the function will execute when "something" invokes (calls) the function:
+
+a. When an event occurs (when a user clicks a button)
+b. When it is invoked (called) from JavaScript code
+c. Automatically (self invoked)- Function expressions can be made "self-invoking".
+
+A self-invoking expression is invoked (started) automatically, without being called.
+Function expressions will execute automatically if the expression is followed by ().
+You cannot self-invoke a function declaration.
+You have to add parentheses around the function to indicate that it is a function expression:
+
+Example
+(function () {
+  let x = "Hello!!";  // I will invoke myself
+})();
+
+function sayHello() {
+	console.log("Hello world"); 
+}
+
+sayHello();
+
+//output: Hello world
+
+function sum(num1, num2){
+	return num1 + num2;
+}
+To invoke this function, we call it like this:
+
+sum(1, 2);
+
+//output: 3
+
+
+
+
+Function Hoisting
+
+Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope.
+Hoisting applies to variable declarations and to function declarations.
+Because of this, JavaScript functions can be called before they are declared:
+myFunction(5);
+
+function myFunction(y) {
+  return y * y;
+}
+
+
+
+
+How to Use the Return Keyword in a Function
+To create a function that will resolve to a value after the function is invoked, you use the return keyword. You write this within the body of the function.
+
+return is a directive that returns a value to the function after the code within it has been executed.
+
+Here’s an example of a function that returns a value, in this case, the sum of two numbers:
+
+function sum(a, b){
+	return  a + b;
+}
+
+sum(10, 20);
+
+Using return inside a function makes it easy to manipulate the data the function returns, 
+by either passing it as a value to, say, another function, or performing additional operations on it.
+
+//output will be 30
+
+
+
+
+
+
+
+How Do Function Scope and Closures Work in JavaScript?
+
+A scope is a nested namespace that localizes the names created within it such that these names don’t interfere with similar names created outside of that scope. There are certain scope rules that apply within a function.
+Each new function you define creates a new scope known as the function scope. Variables created within the function scope are not visible or accessible outside of that scope.
+Nevertheless, variables created outside the function scope but within the scope in which the function is defined can be accessed inside the function. Therefore, if you define a function in global scope, it can access all variables declared in that global scope.
+Also, suppose you have a child function (that is, an inner function) nested inside a parent function (which is the outer function). The child function can access all variables and functions declared in its parent function as well as all variables and functions the parent function has access to – even when its parent function has finished executing and its variables
+ are no longer accessible outside that function. This concept is known as closures in JavaScript.
+However, the parent function cannot access the variables created inside the child function. In this way, the variables and functions inside the child function are confined to their own scope.
+
+Function scope
+Variables defined inside a function cannot be accessed from anywhere outside the function, because
+the variable is defined only in the scope of the function. However, a function can access all variables and functions defined inside the scope in which it is defined.
+In other words, a function defined in the global scope can access all variables defined in the global 
+scope. A function defined inside another function can also access all variables defined in its parent 
+function, and any other variables to which the parent function has access.
+
+// The following variables are defined in the global scope
+const num1 = 20;
+const num2 = 3;
+const name = "Chamakh";
+
+// This function is defined in the global scope
+function multiply() {
+  return num1 * num2;
+}
+
+console.log(multiply()); // 60
+
+// A nested function example
+function getScore() {
+  const num1 = 2;
+  const num2 = 3;
+
+  function add() {
+    return `${name} scored ${num1 + num2}`;
+  }
+
+  return add();
+}
+
+console.log(getScore()); // "Chamakh scored 5"
+
+
+
+
+
+Arrow function expressions
+An arrow function expression is a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage:
+Arrow functions allows a short syntax for writing function expressions.
+
+You don't need the function keyword, the return keyword, and the curly brackets.
+
+Example
+// ES5
+var x = function(x, y) {
+  return x * y;
+}
+
+// ES6
+const x = (x, y) => x * y;
+Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods.
+Arrow functions cannot be used as constructors. Calling them with new throws a TypeError. They also don't have access to the new.target keyword.
+Arrow functions cannot use yield within their body and cannot be created as generator functions.
+
+const materials = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+console.log(materials.map(material => material.length));
+// Expected output: Array [8, 6, 7, 9]
+
+Syntax
+() => expression
+
+param => expression
+
+(param) => expression
+
+(param1, paramN) => expression
+
+() => {
+  statements
+}
+
+param => {
+  statements
+}
+
+(param1, paramN) => {
+  statements
+}
+
+
+Nested functions and closures
+You may nest a function within another function. The nested (inner) function is private to its containing (outer) function.
+
+It also forms a closure. A closure is an expression (most commonly, a function) that can have free variables together with an environment that binds those variables (that "closes" the expression).
+
+Since a nested function is a closure, this means that a nested function can "inherit" the arguments and variables of its containing function. In other words, the inner function contains the scope of the outer function.
+
+To summarize:
+
+The inner function can be accessed only from statements in the outer function.
+The inner function forms a closure: the inner function can use the arguments and variables of the outer function, while the outer function cannot use the arguments and variables of the inner function.
+The following example shows nested functions:
+
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
+}
+
+console.log(addSquares(2, 3)); // 13
+console.log(addSquares(3, 4)); // 25
+console.log(addSquares(4, 5)); // 41
+Copy to ClipboardCopy to Clipboard
+Since the inner function forms a closure, you can call the outer function and specify arguments for both the outer and inner function:
+
+function outside(x) {
+  function inside(y) {
+    return x + y;
+  }
+  return inside;
+}
+
+const fnInside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give it
+console.log(fnInside(5)); // 8
+console.log(outside(3)(5)); // 8 -->
+
+
+
+<script>
+
+  // Assignment
+
+var a = 13;
+var b = 35;
+
+function eachage1(a){
+  var result = a + 5;
+  // return result;
+  console.log(result)
+  
+}
+
+
+function eachage2(b){
+  var result = b + 5;
+  return result;
+}
+
+var son = eachage1.result;
+
+var father = eachage2.result;
+
+function both(son, father){
+  var result = son + father;
+  return result;
+}
+
+2.
+
+function subs(a,b){
+  var result = b - a;
+  return result;
+}
+
+
+
+
+
+// ASSIGNMENT
+
+function func(a, b){
+    var result1 = a + 5;
+    console.log(result1);
+    
+    var result2 = b + 5;
+    console.log(result2);
+    
+    var both = result1 + result2;
+    console.log(both);
+    
+    var subs = b -a;
+    console.log(subs)
+    
+}
+
+func(13 , 35);
+
+</script>

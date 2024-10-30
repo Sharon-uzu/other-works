@@ -1,0 +1,1 @@
+const id = navigator.geolocation.watchPosition(successCallback, errorCallback);

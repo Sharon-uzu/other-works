@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>FRONTEND DEVELOPMENT</title>
+
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+}
+span{
+    font-size:26px;
+    font-weight: bolder;
+    color: rgb(4, 141, 183);
+}
+body{
+    background-image: url(images/bg1.jpeg);
+    /* background-color: blue; */
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+.dark{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .4;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+h1{
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    padding-top: 5%;
+    position: relative;
+    z-index: 12;
+}
+.content{
+    width: 95%;
+    margin: auto;
+    margin-top: 3%;
+    position: relative;
+    z-index: 12;
+
+}
+.content h2{
+    font-size: 36px;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+.content ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.content li{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 3%;
+    border: 2px solid white;
+    list-style: none;
+    border-radius: 8px;
+    text-align: center;
+    height: 150px;
+    width: 45%;
+    cursor: pointer;
+
+}
+
+.content li:hover{
+    background-color: #fff;
+    border-color: rgb(4, 141, 183);
+    color: rgb(4, 141, 183);
+}
+
+
+/* MODALS */
+
+.info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, .5);
+    color: #000;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.info .info-c{
+    background-color: #fff;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    position: relative;
+    z-index: 30;
+    overflow-y: scroll;
+}
+.info .info-c .sides h3 span{
+        font-size: 30px;
+    }
+
+.info .info-c .sides{
+    width: 90%;
+    margin: auto;
+    /* display: flex; */
+    /* justify-content: space-between */
+}
+
+.info .info-c .sides h3{
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.info .info-c .sides p{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: end;
+    padding-top: 20px;
+    cursor: pointer;
+    border: 1px solid #000;
+    padding: 2px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-left: auto;
+}
+
+.info .info-c .split{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+}
+.info .info-c .split .left{
+    width: 35%;
+    text-align: center;
+    animation-name: updown;
+    animation-iteration-count: infinite;
+    /* animation: alltuchtopdown 1.5s ease-in-out 0s infinite alternate; */
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+}
+@keyframes updown{
+    to{
+        transform: translateY(-30px);
+    }
+}
+.info .info-c .split .left img{
+    width: 90%;
+}
+.info .info-c .split .right{
+    width: 100%;
+}
+.info .info-c h5{
+    width: 90%;
+    margin: auto;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    line-height: 36px;
+}
+.right ul{
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+#pop1{
+    display: none;
+}
+#pop2{
+    display: none;
+}
+#pop3{
+    display: none;
+}
+#pop4{
+    display: none;
+}
+#pop5{
+    display: none;
+}
+
+#pop6{
+    display: none;
+}
+
+@media screen and (max-width:800px){
+    h1{
+        font-size: 30px;
+        
+    }
+    .content h2{
+        font-size: 28px;
+    }
+    .content li{
+        font-size: 20px;
+    }
+    .info .info-c{
+        width: 80%;
+        position: absolute;
+        top: 5vh;
+        overflow-y: scroll;
+        /* height: auto; */
+        height: 85vh;
+        padding: 20px 0;
+    }
+    span{
+        font-size: 19px;
+    }
+    .right ul{
+    width: 80%;
+   
+}
+    .info .info-c .sides h3 span{
+        font-size: 20px;
+    }
+    .info .info-c .split{
+        flex-direction: column;
+    }
+    .info .info-c .split .left{
+        width: 70%;
+        margin-bottom: 10px;
+        display: none;
+    }
+    .info .info-c .split .right{
+        width:90%;
+    }
+    .info .info-c h5{
+        font-size: 19px;
+    }
+    .content li{
+        height: 80px;
+    }
+}
+
+@media screen and (max-width:600px){
+    h1{
+        font-size: 24px;
+        
+    }
+    .content li{
+        width: 100%;
+    }
+
+    .info .info-c{
+        width: 95%;
+        
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="dark"></div>
+
+    <h1>FRONTEND DEVELOPMENT</h1>
+
+
+    <div class="content">
+        <!-- <h2>OUTLINES</h2> -->
+        <ul>
+            <li onclick="open1()">What is Frontend Development? </li>
+            <li onclick="open2()">Tools Used in Frontend Development </li>
+            <li onclick="open3()">How to Get Started </li>
+            <li onclick="open4()">Challenges That Can Be Encountered</li>
+            <li onclick="open5()">Suggested Solutions</li>
+            <li onclick="open6()">Where to Source Out Materials</li>
+           
+        </ul>
+    </div>
+
+
+    <!-- pop1 -->
+    <div class="info" id="pop1">
+        <div class="info-c">
+            <div class="sides">
+                <p id="x1" onclick="close1()">X</p>
+                <h3><span>FRONTEND DEVELOPMENT</span></h3>
+                
+            </div>
+            <div class="split">
+                
+                <div class="right">
+                    <h5>Frontend development, also known as client-side development, involves creating the visual and interactive elements of a website or web application. It focuses on what users see and interact with directly in their web browsers.</h5><br>
+
+                    <h5><big>Responsibilities:</big></h5>
+                    
+                    <ul>
+                        <li><span>Designing and implementing the user interface (UI)</span></li><br>
+                        <li><span>Ensuring responsive design for different devices</span></li><br>
+                        <li><span>Debugging and testing frontend code</span></li>
+                    </ul> <br>
+                    <!-- <h5><span style="font-weight: 700; font-size: 26px;">Web:</span> It refers to websites, web pages or anything that works over the internet.</h5>
+
+                    <h5><span style="font-weight: 700; font-size: 26px;">Development:</span> It refers to building the application from scratch.</h5>
+                    <br><br>
+
+                   <h5> Web Development can be classified into two parts:</h5>
+                   <ul style="width: 90%; margin: auto;padding-bottom: 20px;">
+                    <li><span>Frontend Development</span></li>
+                    <li><span>Backend Development</span></li>
+                   </ul> <br>
+
+                   <h5>What's the Difference Between Front-End and Back-End?</h5>
+                   <h5>All websites require front-end and back-end development. <span>Front-end development</span> focuses on the visual aspects of a website — the part that users see and interact with. <span> Back-end development</span> comprises of a site's structure, system, data, and logic.</h5>
+                     -->
+                    
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+
+    <!-- pop2 -->
+    <div class="info" id="pop2">
+        <div class="info-c">
+            <div class="sides">
+                <p onclick="close2()">X</p>
+                <h3>Tools Used in Frontend Development</h3>
+                
+            </div>
+
+            <div class="split">
+                <div class="right">
+
+                    <h5>Languages and Frameworks:</h5>
+                    <h5><b>1.</b> <span>HTML:</span> The standard markup language for creating web pages. It acts as a skeleton for a website since it is used to create the structure and content of a website.</h5>
+                    <h5><b>2.</b><span>CSS:</span> Used to style and layout web pages.</h5>
+                    <h5><b>3.</b><span> JavaScript:</span> JavaScript is a scripting language used to provide a dynamic behavior to our website and enables interactive web pages.</h5>
+                    <h5>Developers also uses <span>libraries</span> and <span>Frameworks</span> such as ReactJS, Angular, Tailwind CSS, Sass etc</h5>
+                    <br>
+                    <!-- <h5>Difference between <span>library</span> and <span>framework</span>?</h5>
+                    <h5> <span>libraries </span>target a specific functionality, <span>while a framework</span> tries to provide everything required to develop a complete application. Frameworks contains a bunch of diiferent libraries</h5> -->
+
+                    <h5>Development Tools:</h5>
+                    <h5><b>1.</b> <span>Code Editors:</span> VS Code, Sublime Text, Atom.</h5>
+                    <h5><b>2.</b><span>Version Control:</span>Git, GitHub, GitLab.</h5>
+                    <!-- <h5><b>3.</b><span> Package Managers:</span> npm, Yarn.</h5><br> -->
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- pop3 -->
+    <div class="info" id="pop3">
+        <div class="info-c">
+            <div class="sides">
+                <p onclick="close3()">X</p>
+                <h3>How to Get Started</h3>
+                
+            </div>
+
+            <div class="split">
+                <!-- <div class="left">
+                    <img src="images/asset 2.png" alt="">
+                </div> -->
+                <div class="right">
+                    <h5>Starting a career in frontend development involves several steps:</h5>
+                    <h5><b>1.</b> <span>Learn the Basics: </span> Start with understanding the structure and styling of web pages(using HTML & CSS) and also learn the basics of JavaScript programming.</h5>
+                    <h5><b>2.</b><span>Build Projects:</span> Create simple projects like a personal portfolio or a basic website and gradually move to more complex projects to enhance your skills.</h5>
+                    <h5><b>3.</b><span> Use Online Resources: </span> Tutorials like FreeCodeCamp, Codecademy and Courses like Coursera, Udemy etc.</h5><br>
+                    <h5><b>4.</b><span> Practice Regularly: </span> Participate in coding challenges on different platforms and contribute to open-source projects on GitHub.</h5><br>
+                    <h5><b>5.</b><span> Join Communities: </span> Engage with developer communities on Stack Overflow, Discord and attend workshops and local meetups.</h5><br>   
+                    <h5><b>5.</b><span> Mentorship: For guidance, support and accountability.</span></h5>
+       
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- pop4 -->
+    <div class="info" id="pop4">
+        <div class="info-c">
+            <div class="sides">
+                <p onclick="close4()">X</p>
+                <h3><span style="font-size: 36px;">Challenges</span></h3>
+                
+            </div>
+            <div class="split">
+                <div class="right">
+                    <!-- <h5>A code editor is a text editor with features that specifically help in writing programming language. </h5>
+                        
+                    <h5>A code editor is a tool to write code in a programming language for a computer program. A computer program is a building block for software, a website, and an operating system.</h5><br>
+
+                    <h5><span style="width: 80%; margin: auto;">Different code editors</span></h5> -->
+                    <h5><b>1.</b>Electricity</h5>
+
+                    <h5><b>2.</b>Internet</h5>
+
+                    <h5><b>3.</b>Laptop.</h5>
+
+                    <h5><b>4.</b>Keeping Up with Technology: Staying updated can be overwhelming.</h5>
+                        
+                    <h5><b>5.</b>Cross-Browser Compatibility: Ensuring that your website works seamlessly across different browsers can be challenging.</h5>
+                        
+                    <h5><b>6.</b> Responsive Design: Creating a consistent experience across various screen sizes and devices requires careful planning and testing.</h5>
+                        
+                    <h5><b>7.</b> Performance Optimization: Optimizing the performance of your web application to ensure fast load times and smooth interactions</h5>
+
+                    <!-- <h5><span>Why VS Code is preferred</span> </h5>
+
+                    <h5> VS Code is lightweight and powerful and can be easily installed on any platform. VS Code has built-in support for Node. js, TypeScript, and JavaScript and a feature-rich extension ecosystem for different languages like C++, Java, C#, PHP, Go, and Python.</h5>
+                    <h5>It contains code editors along with other tools like debuggers, compilers, interpreters, GUI(Graphical User Interface).</h5> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+     <!-- pop5 -->
+    <div class="info" id="pop5">
+        <div class="info-c">
+            <div class="sides">
+                <p onclick="close5()">X</p>
+                <h3><span style="font-size: 36px;">Solutions</span></h3>
+                
+            </div>
+            <div class="split">
+                <div class="right">
+                    <!-- <h5>A code editor is a text editor with features that specifically help in writing programming language. </h5>
+                        
+                    <h5>A code editor is a tool to write code in a programming language for a computer program. A computer program is a building block for software, a website, and an operating system.</h5><br> -->
+
+                    <!-- <h5><span style="width: 80%; margin: auto;">Different code editors</span></h5> -->
+                    
+                    <h5><b>1.</b>Find and get a co-working space</h5>
+
+                    <h5><b>2.</b>Continuous Learning: Take advantage of online courses and tutorials to stay current.</h5>
+                        
+                    <h5><b>3.</b>Use Frameworks and Libraries: Leverage popular frameworks and libraries that offer built-in solutions for common challenges.</h5>
+                        
+                    <h5><b>4.</b>Testing and Debugging: Regularly test your website on different browsers and devices.</h5>
+                        
+                    <h5><b>5.</b> Community Support: Share your challenges and solutions with peers to gain different perspectives.</h5>
+
+
+
+                    <!-- <h5><span>Why VS Code is preferred</span> </h5>
+
+                    <h5> VS Code is lightweight and powerful and can be easily installed on any platform. VS Code has built-in support for Node. js, TypeScript, and JavaScript and a feature-rich extension ecosystem for different languages like C++, Java, C#, PHP, Go, and Python.</h5>
+                    <h5>It contains code editors along with other tools like debuggers, compilers, interpreters, GUI(Graphical User Interface).</h5> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- pop6 -->
+    <div class="info" id="pop6">
+        <div class="info-c">
+            <div class="sides">
+                <p onclick="close6()">X</p>
+                <h3><span style="font-size: 36px;">Where to Source Out Materials</span></h3>
+                
+            </div>
+            <div class="split">
+                <div class="right">
+                    <!-- <h5>A code editor is a text editor with features that specifically help in writing programming language. </h5>
+                        
+                    <h5>A code editor is a tool to write code in a programming language for a computer program. A computer program is a building block for software, a website, and an operating system.</h5><br> -->
+
+                    <!-- <h5><span style="width: 80%; margin: auto;">Different code editors</span></h5> -->
+
+                    <h5><b>1.</b>Online Learning Platforms like FreeCodeCamp, Codecademy, Coursera etc .</h5>
+                        
+                    <h5><b>2.</b>Books.</h5>
+                        
+                    <h5><b>3.</b>Communities and Forums</h5>
+                        
+                    <h5><b>4.</b>Blogs and Newsletters</h5>
+
+                    <!-- <h5><span>Why VS Code is preferred</span> </h5>
+
+                    <h5> VS Code is lightweight and powerful and can be easily installed on any platform. VS Code has built-in support for Node. js, TypeScript, and JavaScript and a feature-rich extension ecosystem for different languages like C++, Java, C#, PHP, Go, and Python.</h5>
+                    <h5>It contains code editors along with other tools like debuggers, compilers, interpreters, GUI(Graphical User Interface).</h5> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- What is a Code Editor?
+    A code editor is an application designed to assist developers in writing and editing code more efficiently.  -->
+
+
+    <!-- What is Version Control?
+    Version control is a system that allowing developers to track and manage changes to their codebase, collaborate with others, and revert to previous versions if necessary. -->
+
+    
+
+    <script src="main.js"></script>
+    
+</body>
+</html>

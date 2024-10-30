@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Playfair+Display:ital@0;1&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Edu SA Beginner', cursive;
+    font-family: 'Playfair Display', serif;
+
+    display: flex;    
+}
+
+div{
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+ h2{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: rgb(57, 139, 139);
+    font-weight: 800;
+}
+
+div ol li{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+div ul {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+div ol ul li{
+    font-size: 20px;
+}
+
+div p{
+    width: 85%;
+    text-align: end;
+}
+
+div p a{
+    font-size: 26px;
+    font-weight: 700;
+    color: rgb(53, 127, 127);
+}
+
+
+.content{
+    padding-bottom: 30px;
+}
+.content div{
+    height: 100%;
+}
+
+section{
+    margin-top: 40px;
+}
+
+span{
+    font-size: 22px;
+    padding-bottom: 8px;
+}
+
+h3{
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.content ul{
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+}
+.content ul li{
+    font-size: 21px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,399 @@
+<!-- OPERATORS -->
+
+Definition
+
+1. Javascript Operators are special symbols used to perform operations on operands(values and variables).
+2. Operators are used to assign values, perform arithmetic operations and more.
+3. Operators are symbols used to manipulate a certain value or operand. They are used to perform specific mathematical and logical computation on operands. In JS, Operators are used to compare values, perform arithmetic operations etc.
+
+
+TYPES OF OPERATORS
+1.Arithmetic Operator: These are operators that operate upon the numerical values and return a numerical value.
+
+a. Addition(+) : It performs addition on two operands. It can also be used to concantenate(add) strings.
+
+For addition:
+y= 5 + 5   will give y= 10
+
+
+For concantenation:
+y= "Greeks" + "for" + "Geeks" will give y= "GreeksforGeeks" 
+
+b. Subtraction (-): Subtraction operator performs subtraction on two operands.
+eg. Y = 5 - 3 gives Y = 2 
+
+c. Multiplication (*): Multiplication operator performs multiplication on two operands.
+eg. Y = 5 * 5 gives Y = 25
+
+d.Division (/): Division operator performs division on two operands (divide the numerator by the denominator).
+eg Y = 5 / 5 gives Y = 1
+
+e. Modulus (%): Modulus operator gives a remainder of an integer division.
+eg. A % B means remainder (A/B)
+Y = 5 % 4 gives Y = 1
+
+f. Exponentiation (**): Exponentiation operator give the power of the first operator raised to the second operator.
+eg. Y = 5 ** 3 gives Y = 125
+
+g.Increment(++): Increment operator increases an integer value by one. 
+eg. let A = 10 and Y = A + + then A = 11, Y=10
+if A = 10 and Y = + + A then A = 11, Y=11
+
+h. Decrement (- -): Decrement operator decreases an integer value by one.
+eg. let A = 10 and Y = A - - then A = 9, Y=10
+if A = 10 and Y = - - A then A = 9, Y=9
+
+i. Unary (+): Unary is the fastest and preferred way of converting something into a number
+eg +a means a is a positive number
+
+j. Negation (-): Negation operator gives the negation of an operand.
+eg. -a means a is a negative number
+
+
+
+2. JavaScript Assignment Operators: The assignment operation evaluates the assigned value. Chaining the assignment operator is possible in order to assign a single value to multiple variables
+
+TYPES OF ASSIGNMENT OPERATORS
+
+a. Assignment (=): This operator assigns the right operand value to the left operand.
+eg. If A = 10 and Y = A then Y = 10
+
+b.Addition Assignment (+=): Sums up left and right operand values and then assigns the result to the left operand.;
+eg. Y += 1 gives Y = Y + 1 
+
+c. Subtraction Assignment (- =): It subtracts the right side value from the left side value and then assigns the result to the left operand. 
+eg. Y -= 1 gives Y = Y - 1 
+
+d. Division Assignment (/ =): It divides a variable by the value of the right operand and assigns the result to the variable.
+eg. Y /= A is equivalent to Y = Y / A
+
+e. Modules/Remainder Assignment (% =): It divides a variable by the value of the right operand and assigns the remainder to the variable.
+eg. Y %= A is equivalent to Y = Y % A
+
+f. Exponentiation Assignment (** =): This raises the value of a variable to the power of the right operand.
+eg. Y **= A is equivalent to Y=Y ** A
+
+g. Left Shift Assignment (<< =): It moves the specified amount of bits to the left and assigns the result to the variable.
+eg. Y <<= A is equivalent to Y=Y << A
+
+h. Right Shift Assignment (>> =): It moves the specified amount of bits to the right and assigns the result to the variable.
+eg. Y >>= A is equivalent to Y = Y >> A
+
+i. Bitwise OR Assignment (| =): It does a bitwise OR operation on the operand, and assigns the result to the variable.
+Y |= A is equivalent to Y= Y | b
+
+
+j. Bitwise XOR Assignment (^ =): It does a bitwise XOR operation on the operand, and assigns the result to the variable.
+eg. Y ^= A is equivalent to Y= Y ^ A
+
+
+
+
+
+
+
+3. JavaScript Comparison Operators: Comparison operators are mainly used to perform the logical operations that determine the equality or difference between the values.
+
+a. Equality (==): Compares the equality of two operands. If equal then the condition is true otherwise false.
+    Y = 5 and X = 6
+    Y = = X is false.
+b. Strict equality (===): Compares the equality of two operands. If equal then the condition is true otherwise false.
+    Y = 5 and X = '5'
+    Y = = = X is false.
+c. Inequality (!=): compare the equality of two operands with type. If both value and type are equal then the condition is true otherwise false.
+    let X = 10 then X ! = 11 is true. 
+d. Strict inequality(!==): Compares inequality of two operands. True if operands are not equal. 
+    let X = 10 then X ! == 11 is true. 
+e. Greater than (>): This operator checks whether the left side value is greater than the right side value. If yes then it returns true otherwise it returns false. 
+    let X = 10 then X > 11 is false. 
+f. Less than (<): This operator checks whether the left side value is less than the right side value. If yes then it returns true otherwise it returns false. 
+    let X = 10 then X < 11 is true. 
+g. Greater than or Equal to (> =): This operator checks whether the left side operand is greater than or equal to the right side operand. If yes then it returns true otherwise it returns false. 
+    let X = 10 then X > = 11 is false. 
+    Less than or Equal to (<= ): This operator checks whether the left side operand value is less than or equal to the right side operand value. If yes then it returns true otherwise it returns false. 
+    let X = 10 then X < = 10 is true. 
+
+
+
+
+4. JavaScript Logical Operators: These operators are used to determine the logic between variables or values.
+
+a. Logical AND (&&): It checks whether two operands are non-zero (0, false, undefined, null, or “” are considered as zero), if yes then
+     return the last operand when evaluating from left to right. 
+    Y = 5 and X = 6
+    Y && X is 6.
+b. Logical OR (||): It checks whether two operands are non-zero (0, false, undefined, null, or “” is considered as zero), if yes then return
+     the first operand when evaluating from left to right. 
+    Y = 5 and X = 0
+    Y || X is 5.
+c. Logical NOT (!): It reverses the boolean result of the operand (or condition). 
+    Y = 5 and X = 0
+    !(Y || X) is false.
+
+
+5. JavaScript Bitwise Operator: The bitwise operator in JavaScript is used to convert the number to a 32-bit binary number and perform the bitwise operation. The number is converted back to the 64-bit number after the result. 
+
+a. Bitwise AND(&): The operator returns true only if both the operands are true
+    A = 6, B=1
+    A&B = 0
+b. Bitwise OR(|): The operator returns true even if one of the operands is true 
+    A = 6, B=1
+    A|B = 7
+c. Bitwise XOR(^): The operator returns true if both operators are distinct
+    A = 6, B=1
+    A^B = 7
+d. Bitwise NOT(~): This operator is used to invert the boolean value of the operand
+    A = 6
+    ~A = -7
+e. Bitwise Left Shift(<<): In this two operators are used where the first operand is the number and the second operand is the number of bits to shift to the left.
+    A = 6, B=1
+    A<<B = 12
+f. Bitwise Right Shift(>>): In this two operators are used where the first operand is the number and the second operand is the number of bits to shift to the right.
+    A = 6, B=1
+    A>>B = 3
+g.  Zero Fill Right Shift(>>>): It is the same as a bitwise right shift the only difference is that overflowing bits are discarded.
+    A = 6, B=1
+    A>>>B = 3
+
+
+    
+6. JavaScript Ternary Operator: The ternary operator has three operands. It is the simplified operator of if/else.
+    
+Ternary Operator(?): It is like the short form of the if-else condition. 
+    
+    Y =  ? A : B
+    If the condition is true then Y = A otherwise Y = B
+    Example: In this example, we will use the ternary operator.    
+    // Assigning values
+    let PMarks = 40
+     
+ Ternary Operator
+    let result = (PMarks > 39)?
+        "Pass":"Fail";
+  
+    console.log(result);
+    Output: Pass
+
+
+
+7. JavaScript typeof Operator: It returns the data type of its operand in the form of a string. The operand can be any object, function, or variable.
+
+JavaScript typeof: It returns the operand type, The possible types that exist in javascript are undefined, Object, boolean, number, string, symbol, and function.
+
+typeof variable;
+Example: In this example, we will use typeof operator.
+
+
+    var a = 17;
+    var b = "GeeksforGeeks";
+    var c = "";
+    var d = null;
+     
+    console.log("Type of a = " + (typeof a));
+    console.log("Type of b = " + (typeof b));
+    console.log("Type of c = " + (typeof c));
+    console.log("Type of d = " + (typeof d));
+    console.log("Type of e = " + (typeof e));
+Output:
+
+Type of a = number
+Type of b = string
+Type of c = string
+Type of d = object
+Type of e = undefined
+
+
+
+8. The Spread operator allows an iterable to expand in places where 0+ arguments are expected. It is mostly used in the variable array where there is more than 1 value is expected. It allows us the privilege to obtain a list of parameters from an array. 
+
+The syntax of the Spread operator is the same as the Rest parameter but it works completely opposite of it. 
+
+Syntax:
+
+var variablename1 = [...value]; 
+In the above syntax, … is a spread operator which will target all values in a particular variable. When … occurs in the function call or alike, it’s called a spread operator. Spread operator can be used in many cases, like when we want to expand, copy, concat, with math object. Let’s look at each of them one by one: 
+
+Note: In order to run the code in this article make use of the console provided by the browser.
+
+Concat(): The concat() method provided by javascript helps in the concatenation of two or more strings(String concat() ) or is used to merge two or more arrays. In the case of arrays, this method does not change the existing arrays but instead returns a new array. 
+
+Example: This example shows the above-explained approach.
+
+
+    // normal array concat() method
+    let arr = [1,2,3];
+    let arr2 = [4,5];
+      
+    arr = arr.concat(arr2);
+      
+    console.log(arr); // [ 1, 2, 3, 4, 5 ]
+
+    We can achieve the same output with the help of the spread operator, the code will look something like this: 
+
+Example:
+
+
+    // spread operator doing the concat job
+    let arr = [1,2,3];
+    let arr2 = [4,5];
+      
+    arr = [...arr,...arr2];
+    console.log(arr); // [ 1, 2, 3, 4, 5 ]
+Output: 
+
+[1,2,3,4,5]
+Note: Though we can achieve the same result, but it is not recommended to use the spread in this particular case, as for a large data set it will work slower when compared to the native concat() method.
+
+Copy(like splice method): In order to copy the content of an array to another we can do something like this: 
+
+Example:
+
+
+    // copying without the spread operator
+    let arr = ['a','b','c'];
+    let arr2 = arr;
+      
+    console.log(arr2); // [ 'a', 'b', 'c' ]
+Output: 
+
+[a,b,c]
+The above code works fine because we can copy the contents of one array to another, but under the hood, it’s very different as when we mutate a new array it will also affect the old array(the one which we copied). See the code below: 
+
+Example:
+
+
+    // changed the original array
+    let arr = ['a','b','c'];
+    let arr2 = arr;
+      
+    arr2.push('d');
+      
+    console.log(arr2);
+    console.log(arr); // even affected the original array(arr) 
+Output: 
+
+['a', 'b', 'c', 'd']
+['a', 'b', 'c', 'd']
+In the above code we can clearly see that when we tried to insert an element inside the array, the original array is also altered which we didn’t intend and is not recommended. We can make use of the spread operator in this case, like this: 
+
+Example:
+
+
+    // spread operator for copying 
+    let arr = ['a','b','c'];
+    let arr2 = [...arr];
+      
+    console.log(arr); // [ 'a', 'b', 'c' ]
+      
+    arr2.push('d'); //inserting an element at the end of arr2
+      
+    console.log(arr2); // [ 'a', 'b', 'c', 'd' ]
+    console.log(arr); // [ 'a', 'b', 'c' ]
+Output: 
+
+(3) ['a', 'b', 'c']
+(4) ['a', 'b', 'c', 'd']
+(3) ['a', 'b', 'c']
+By using the spread operator we made sure that the original array is not affected whenever we alter the new array.
+
+Expand: Whenever we want to expand an array into another we do something like this: 
+
+Example:
+
+
+    // normally used expand method
+    let arr = ['a','b'];
+    let arr2 = [arr,'c','d'];
+      
+    console.log(arr2); // [ [ 'a', 'b' ], 'c', 'd' ]
+Output: 
+
+(3) [Array(2), 'c', 'd']
+0: (2) ['a', 'b']
+1: "c"
+2: "d"
+length: 3
+[[Prototype]]: Array(0)
+Even though we get the content on one array inside the other one, but actually it is an array inside another array which is definitely what we didn’t want. If we want the content to be inside a single array we can make use of the spread operator. 
+
+Example:
+
+
+    // expand using spread operator
+      
+    let arr = ['a','b'];
+    let arr2 = [...arr,'c','d'];
+      
+    console.log(arr2); // [ 'a', 'b', 'c', 'd' ]
+Output: 
+
+(4) ['a', 'b', 'c', 'd']
+Math: The Math object in javascript has different properties that we can make use of to do what we want like finding the minimum from a list of numbers, finding the maximum, etc. Consider the case that we want to find the minimum from a list of numbers, we will write something like this: 
+
+Example:
+
+
+console.log(Math.min(1,2,3,-1)); //-1 
+Output: 
+
+-1
+Now consider that we have an array instead of a list, this above Math object method won’t work and will return NaN, like: 
+
+Example:
+
+
+// min in an array using Math.min()
+let arr = [1,2,3,-1];
+console.log(Math.min(arr)); //NaN
+Output: 
+
+NaN
+When …arr is used in the function call, it “expands” an iterable object arr into the list of arguments In order to avoid this NaN output, we make use of a spread operator, like: 
+
+Example:
+
+
+// with spread 
+let arr = [1,2,3,-1];
+  
+console.log(Math.min(...arr)); //-1
+Output: 
+
+-1
+Example of spread operator with objects: ES6 has added spread property to object literals in javascript. The spread operator (…) with objects is used to create copies of existing objects with new or updated values or to make a copy of an object with more properties. Let’s take an example of how to use the spread operator on an object, 
+
+Example:
+
+
+const user1 = {
+    name: 'Jen',
+    age: 22
+};
+  
+const clonedUser = { ...user1 };
+console.log(clonedUser);
+Output: 
+
+{name: 'Jen', age: 22}
+Here we are spreading the user1 object. All key-value pairs of the user1 object are copied into the clonedUser object. Let’s look at another example of merging two objects using the spread operator, 
+
+Example:
+
+
+    const user1 = {
+        name: 'Jen',
+        age: 22,
+    };
+      
+    const user2 = {
+        name: "Andrew",
+        location: "Philadelphia"
+    };
+      
+    const mergedUsers = {...user1, ...user2};
+    console.log(mergedUsers)
+Output: 
+
+{name: 'Andrew', age: 22, location: 'Philadelphia'}
+The mergedUsers is a copy of user1 and user2. Actually, every enumerable property on the objects will be copied to the mergedUsers object. The spread operator is just a shorthand for the Object.assign() method but, there are some differences between the two.
+
